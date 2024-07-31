@@ -1,0 +1,30 @@
+server:
+  port: 8019
+  servlet:
+    context-path: /ems_nebula
+
+logging:
+  level:
+    root: INFO
+    org.univers.ems.service: DEBUG
+  file:
+    name: logs/app.log
+    max-size: 10MB
+    max-history: 10
+    total-size-cap: 100MB
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+
+nebula:
+  address: 10.65.62.86:9669
+  username: root
+  password: nebula
+  reconnect: true
+  space: ems
+
+influx:
+  influxUrl: 'http://10.65.103.187:8086'
+  bucket: 'ems_history_data'
+  org: 'ems_influx'
+  token: '9p77QfRxKePoLEVRl3-qukZpk-YxWeUEAj2UDQeh12WzrlkHvBDMGjJsMEr9AjKAyorgCJJvBxAxIH_tagL_gw=='
+
